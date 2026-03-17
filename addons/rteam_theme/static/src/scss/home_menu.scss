@@ -166,13 +166,89 @@
 }
 
 // ──────────────────────────────────────────────
-//  MOBILE — App sidebar overlay
-//  (.o_app_menu_sidebar is rendered in the DOM)
+//  MOBILE — Burger menu overlay + App sidebar
+//  Odoo 19 uses .o_burger_menu → .o_burger_menu_content
+//  and .o_app_menu_sidebar inside
 // ──────────────────────────────────────────────
 
+// Full-screen burger menu overlay
+.o_burger_menu {
+    background: #0F1022 !important;
+    color: rgba(255, 255, 255, 0.85) !important;
+
+    // Top bar inside burger menu (home icon, close button, etc.)
+    .o_burger_menu_topbar,
+    .o_navbar_apps_menu,
+    .o_sidebar_topbar {
+        background: #161829 !important;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.07) !important;
+        color: rgba(255, 255, 255, 0.85) !important;
+    }
+
+    // Content wrapper
+    .o_burger_menu_content {
+        background: #0F1022 !important;
+        color: rgba(255, 255, 255, 0.85) !important;
+    }
+
+    // App list items
+    .o_app {
+        background: transparent !important;
+        color: rgba(255, 255, 255, 0.8) !important;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
+
+        &:hover, &:focus {
+            background: rgba(255, 255, 255, 0.07) !important;
+            color: white !important;
+        }
+
+        &.bg-primary-subtle, &.active {
+            background: rgba(52, 152, 219, 0.18) !important;
+            color: white !important;
+        }
+
+        .o_app_icon {
+            border-radius: 12px !important;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4) !important;
+        }
+
+        .o_app_name {
+            color: inherit !important;
+        }
+    }
+
+    // "All Apps" / navigation buttons
+    .btn-primary {
+        background: rgba(52, 152, 219, 0.3) !important;
+        border-color: rgba(52, 152, 219, 0.4) !important;
+        color: rgba(255, 255, 255, 0.9) !important;
+    }
+
+    // User menu, debug, etc.
+    .o_burger_menu_user,
+    .o_user_menu {
+        background: #161829 !important;
+        border-top: 1px solid rgba(255, 255, 255, 0.07) !important;
+        color: rgba(255, 255, 255, 0.75) !important;
+    }
+
+    // Any stray light backgrounds
+    .bg-white, .bg-light, .bg-body {
+        background: #161829 !important;
+    }
+
+    // Icons / buttons in the topbar
+    .o_menu_toggle, .btn-link, .nav-link {
+        color: rgba(255, 255, 255, 0.75) !important;
+        &:hover { color: white !important; }
+    }
+}
+
+// App sidebar (also used standalone in some Odoo 19 builds)
 .o_app_menu_sidebar {
     background: #0F1022 !important;
     border-right: 1px solid rgba(255, 255, 255, 0.07) !important;
+    color: rgba(255, 255, 255, 0.85) !important;
 
     .o_sidebar_topbar {
         background: #161829 !important;
@@ -183,12 +259,17 @@
     .btn-primary {
         background: rgba(52, 152, 219, 0.3) !important;
         border-color: rgba(52, 152, 219, 0.4) !important;
-        color: rgba(255,255,255,0.9) !important;
+        color: rgba(255, 255, 255, 0.9) !important;
     }
 
     .o_app {
         color: rgba(255, 255, 255, 0.8) !important;
         border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
+
+        &:hover {
+            background: rgba(255, 255, 255, 0.07) !important;
+            color: white !important;
+        }
 
         &.bg-primary-subtle {
             background: rgba(52, 152, 219, 0.18) !important;
@@ -196,7 +277,8 @@
         }
 
         .o_app_icon {
-            border-radius: 10px !important;
+            border-radius: 12px !important;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4) !important;
         }
     }
 }
