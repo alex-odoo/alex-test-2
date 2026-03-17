@@ -1,6 +1,6 @@
 {
     'name': 'RTeam Enterprise Style Icons',
-    'version': '19.0.1.0.0',
+    'version': '19.0.1.1.0',
     'category': 'Theme/Backend',
     'summary': 'Enterprise-style dark home menu with gradient app icons',
     'description': """
