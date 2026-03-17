@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E2235"/>
+      <stop offset="100%" stop-color="#161929"/>
+    </linearGradient>
+    <linearGradient id="g1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF8B42"/>
+      <stop offset="100%" stop-color="#FF4500"/>
+    </linearGradient>
+    <linearGradient id="g2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFB347"/>
+      <stop offset="100%" stop-color="#FF6B1A"/>
+    </linearGradient>
+  </defs>
+  <rect width="200" height="200" rx="40" fill="url(#bg)"/>
+  <!-- Main bubble -->
+  <rect x="28" y="44" width="104" height="72" rx="20" fill="url(#g1)"/>
+  <polygon points="40,116 32,140 64,116" fill="url(#g1)"/>
+  <!-- Secondary bubble -->
+  <rect x="72" y="80" width="100" height="66" rx="18" fill="url(#g2)" opacity="0.85"/>
+  <polygon points="148,146 168,162 168,146" fill="url(#g2)" opacity="0.85"/>
+  <!-- Dots on main bubble -->
+  <circle cx="62" cy="80" r="6" fill="white" opacity="0.9"/>
+  <circle cx="80" cy="80" r="6" fill="white" opacity="0.9"/>
+  <circle cx="98" cy="80" r="6" fill="white" opacity="0.9"/>
+</svg>

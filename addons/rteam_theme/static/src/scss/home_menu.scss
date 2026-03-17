@@ -1,0 +1,227 @@
+/**
+ * RTeam Enterprise Style — Home Menu Transformation
+ *
+ * Transforms the Odoo 19 Community apps dropdown into an Enterprise-style
+ * dark grid with gradient icons.
+ *
+ * Targets:
+ *   .o_navbar_apps_menu .o-dropdown--menu  — dropdown container
+ *   .o_app                                 — individual app tile
+ *   [data-menu-xmlid="..."]::before        — per-app custom icons
+ */
+
+// ──────────────────────────────────────────────
+//  Dropdown container → Enterprise dark grid
+// ──────────────────────────────────────────────
+.o_navbar_apps_menu {
+    .o-dropdown--menu {
+        min-width: 540px !important;
+        max-width: 600px !important;
+        max-height: 82vh !important;
+        overflow-y: auto !important;
+        padding: 20px !important;
+        background: #0F1022 !important;
+        border: 1px solid rgba(255, 255, 255, 0.07) !important;
+        border-radius: 22px !important;
+        box-shadow: 0 24px 64px rgba(0, 0, 0, 0.65) !important;
+
+        // Grid layout — 5 columns like Enterprise
+        display: grid !important;
+        grid-template-columns: repeat(5, 1fr) !important;
+        gap: 10px !important;
+
+        // Hide the default dividers / separators
+        hr, .dropdown-divider {
+            display: none !important;
+        }
+
+        // Scrollbar styling
+        &::-webkit-scrollbar {
+            width: 6px;
+        }
+        &::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.04);
+            border-radius: 3px;
+        }
+        &::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.18);
+            border-radius: 3px;
+        }
+    }
+
+    // ──────────────────────────────────────────
+    //  Individual app tile
+    // ──────────────────────────────────────────
+    .o_app {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: flex-start !important;
+        padding: 14px 8px 12px !important;
+        min-height: 96px !important;
+        background: rgba(255, 255, 255, 0.05) !important;
+        border: 1px solid rgba(255, 255, 255, 0.07) !important;
+        border-radius: 16px !important;
+        color: rgba(255, 255, 255, 0.82) !important;
+        font-size: 11px !important;
+        font-weight: 500 !important;
+        text-align: center !important;
+        line-height: 1.3 !important;
+        text-decoration: none !important;
+        white-space: normal !important;
+        word-break: break-word !important;
+        transition: background 0.2s ease, transform 0.2s ease,
+                    box-shadow 0.2s ease, color 0.2s ease !important;
+
+        // Icon area via ::before
+        &::before {
+            content: '' !important;
+            display: block !important;
+            width: 58px !important;
+            height: 58px !important;
+            flex-shrink: 0 !important;
+            margin-bottom: 8px !important;
+            border-radius: 14px !important;
+            background-color: #1E2235 !important;  // fallback card color
+            background-size: cover !important;
+            background-repeat: no-repeat !important;
+            background-position: center !important;
+            transition: transform 0.2s ease !important;
+        }
+
+        &:hover {
+            background: rgba(255, 255, 255, 0.1) !important;
+            border-color: rgba(255, 255, 255, 0.14) !important;
+            color: white !important;
+            transform: translateY(-3px) !important;
+            box-shadow: 0 10px 28px rgba(0, 0, 0, 0.4) !important;
+
+            &::before {
+                transform: scale(1.06) !important;
+            }
+        }
+
+        // Active / focused state
+        &.focus, &:focus {
+            background: rgba(255, 255, 255, 0.1) !important;
+            color: white !important;
+            outline: none !important;
+            box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.5) !important;
+        }
+    }
+
+    // ──────────────────────────────────────────
+    //  Custom gradient icons per application
+    //  (matched by data-menu-xmlid attribute)
+    // ──────────────────────────────────────────
+
+    [data-menu-xmlid="mail.menu_root_discuss"]::before {
+        background-image: url('/rteam_theme/static/src/img/discuss.svg') !important;
+    }
+
+    [data-menu-xmlid="calendar.mail_menu_calendar"]::before {
+        background-image: url('/rteam_theme/static/src/img/calendar.svg') !important;
+    }
+
+    [data-menu-xmlid="project_todo.menu_todo_todos"]::before {
+        background-image: url('/rteam_theme/static/src/img/todo.svg') !important;
+    }
+
+    [data-menu-xmlid="contacts.menu_contacts"]::before {
+        background-image: url('/rteam_theme/static/src/img/contacts.svg') !important;
+    }
+
+    [data-menu-xmlid="crm.crm_menu_root"]::before {
+        background-image: url('/rteam_theme/static/src/img/crm.svg') !important;
+    }
+
+    [data-menu-xmlid="sale.sale_menu_root"]::before {
+        background-image: url('/rteam_theme/static/src/img/sales.svg') !important;
+    }
+
+    [data-menu-xmlid="spreadsheet_dashboard.spreadsheet_dashboard_menu_root"]::before {
+        background-image: url('/rteam_theme/static/src/img/dashboards.svg') !important;
+    }
+
+    [data-menu-xmlid="point_of_sale.menu_point_root"]::before {
+        background-image: url('/rteam_theme/static/src/img/pos.svg') !important;
+    }
+
+    [data-menu-xmlid="account.menu_finance"]::before {
+        background-image: url('/rteam_theme/static/src/img/invoicing.svg') !important;
+    }
+
+    [data-menu-xmlid="project.menu_main_pm"]::before {
+        background-image: url('/rteam_theme/static/src/img/project.svg') !important;
+    }
+
+    [data-menu-xmlid="mass_mailing.mass_mailing_menu_root"]::before {
+        background-image: url('/rteam_theme/static/src/img/email_marketing.svg') !important;
+    }
+
+    [data-menu-xmlid="purchase.menu_purchase_root"]::before {
+        background-image: url('/rteam_theme/static/src/img/purchase.svg') !important;
+    }
+
+    [data-menu-xmlid="stock.menu_stock_root"]::before {
+        background-image: url('/rteam_theme/static/src/img/inventory.svg') !important;
+    }
+
+    [data-menu-xmlid="mrp.menu_mrp_root"]::before {
+        background-image: url('/rteam_theme/static/src/img/manufacturing.svg') !important;
+    }
+
+    [data-menu-xmlid="maintenance.menu_maintenance_title"]::before {
+        background-image: url('/rteam_theme/static/src/img/maintenance.svg') !important;
+    }
+
+    [data-menu-xmlid="hr.menu_hr_root"]::before {
+        background-image: url('/rteam_theme/static/src/img/employees.svg') !important;
+    }
+
+    [data-menu-xmlid="hr_attendance.menu_hr_attendance_root"]::before {
+        background-image: url('/rteam_theme/static/src/img/attendances.svg') !important;
+    }
+
+    [data-menu-xmlid="hr_recruitment.menu_hr_recruitment_root"]::before {
+        background-image: url('/rteam_theme/static/src/img/recruitment.svg') !important;
+    }
+
+    [data-menu-xmlid="hr_holidays.menu_hr_holidays_root"]::before {
+        background-image: url('/rteam_theme/static/src/img/time_off.svg') !important;
+    }
+
+    [data-menu-xmlid="base.menu_management"]::before {
+        background-image: url('/rteam_theme/static/src/img/apps.svg') !important;
+    }
+
+    [data-menu-xmlid="base.menu_administration"]::before {
+        background-image: url('/rteam_theme/static/src/img/settings.svg') !important;
+    }
+}
+
+// ──────────────────────────────────────────────
+//  Mobile sidebar — also apply dark styling
+// ──────────────────────────────────────────────
+.o_app_menu_sidebar {
+    background: #0F1022 !important;
+    border-right: 1px solid rgba(255, 255, 255, 0.07) !important;
+
+    .o_sidebar_topbar {
+        background: #161829 !important;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.07) !important;
+    }
+
+    .o_app {
+        color: rgba(255, 255, 255, 0.8) !important;
+
+        &.bg-primary-subtle {
+            background: rgba(52, 152, 219, 0.2) !important;
+            color: white !important;
+        }
+
+        .o_app_icon {
+            border-radius: 10px !important;
+        }
+    }
+}

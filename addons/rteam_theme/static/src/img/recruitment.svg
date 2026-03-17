@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E2235"/>
+      <stop offset="100%" stop-color="#161929"/>
+    </linearGradient>
+    <linearGradient id="g1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#9B59B6"/>
+      <stop offset="100%" stop-color="#3498DB"/>
+    </linearGradient>
+    <linearGradient id="g2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFC300"/>
+      <stop offset="100%" stop-color="#F39C12"/>
+    </linearGradient>
+  </defs>
+  <rect width="200" height="200" rx="40" fill="url(#bg)"/>
+  <!-- Person head -->
+  <circle cx="88" cy="72" r="30" fill="url(#g1)"/>
+  <!-- Person body -->
+  <path d="M40,170 Q88,128 136,170" stroke="url(#g1)" stroke-width="26"
+        stroke-linecap="round" fill="none"/>
+  <!-- Star badge -->
+  <polygon points="154,38 160,58 180,58 164,70 170,90 154,78 138,90 144,70 128,58 148,58"
+           fill="url(#g2)"/>
+</svg>

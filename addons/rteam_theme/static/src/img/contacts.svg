@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E2235"/>
+      <stop offset="100%" stop-color="#161929"/>
+    </linearGradient>
+    <linearGradient id="g1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1ABC9C"/>
+      <stop offset="100%" stop-color="#2980B9"/>
+    </linearGradient>
+    <linearGradient id="g2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3498DB"/>
+      <stop offset="100%" stop-color="#1ABC9C"/>
+    </linearGradient>
+  </defs>
+  <rect width="200" height="200" rx="40" fill="url(#bg)"/>
+  <!-- Card -->
+  <rect x="28" y="42" width="144" height="116" rx="16" fill="url(#g1)" opacity="0.2"/>
+  <rect x="28" y="42" width="144" height="116" rx="16" stroke="url(#g1)" stroke-width="3" fill="none"/>
+  <!-- Avatar circle -->
+  <circle cx="82" cy="92" r="28" fill="url(#g2)"/>
+  <!-- Person silhouette -->
+  <circle cx="82" cy="84" r="12" fill="white" opacity="0.9"/>
+  <path d="M58,118 Q82,104 106,118" stroke="white" stroke-width="9"
+        stroke-linecap="round" fill="none" opacity="0.9"/>
+  <!-- Lines (contact info) -->
+  <rect x="118" y="76" width="42" height="8" rx="4" fill="url(#g1)" opacity="0.8"/>
+  <rect x="118" y="92" width="34" height="8" rx="4" fill="url(#g1)" opacity="0.55"/>
+  <rect x="118" y="108" width="38" height="8" rx="4" fill="url(#g1)" opacity="0.4"/>
+  <!-- Bottom tab -->
+  <rect x="28" y="132" width="144" height="26" rx="0" fill="url(#g1)" opacity="0.35"/>
+  <rect x="28" y="142" width="144" height="16" rx="0" fill="url(#g1)" opacity="0.2"/>
+  <rect x="28" y="142" width="144" height="16" rx="0" style="rx: 0 0 16 16" fill="url(#g1)" opacity="0.2"/>
+  <path d="M28,142 L172,142 L172,158 Q172,158 172,158 L28,158 Q28,158 28,158 Z" rx="16" fill="url(#g1)" opacity="0.2"/>
+</svg>

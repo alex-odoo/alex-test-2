@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E2235"/>
+      <stop offset="100%" stop-color="#161929"/>
+    </linearGradient>
+    <linearGradient id="g1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#95A5A6"/>
+      <stop offset="100%" stop-color="#3498DB"/>
+    </linearGradient>
+  </defs>
+  <rect width="200" height="200" rx="40" fill="url(#bg)"/>
+  <!-- Main gear -->
+  <path d="M100,38 L112,46 L126,42 L134,56 L150,58 L150,74
+           L164,82 L158,96 L166,110 L154,118 L154,134
+           L140,138 L134,152 L118,150 L108,162 L96,162
+           L86,150 L70,152 L64,138 L50,134 L50,118
+           L38,110 L46,96 L40,82 L54,74 L54,58 L70,56
+           L78,42 L92,46 Z"
+        fill="url(#g1)"/>
+  <!-- Inner hole -->
+  <circle cx="100" cy="100" r="26" fill="#1E2235"/>
+  <!-- Inner ring -->
+  <circle cx="100" cy="100" r="18" fill="none" stroke="url(#g1)" stroke-width="4" opacity="0.4"/>
+</svg>

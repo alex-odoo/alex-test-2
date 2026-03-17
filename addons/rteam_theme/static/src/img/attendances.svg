@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E2235"/>
+      <stop offset="100%" stop-color="#161929"/>
+    </linearGradient>
+    <linearGradient id="g1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F39C12"/>
+      <stop offset="100%" stop-color="#3498DB"/>
+    </linearGradient>
+    <linearGradient id="g2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFC300"/>
+      <stop offset="100%" stop-color="#2980B9"/>
+    </linearGradient>
+  </defs>
+  <rect width="200" height="200" rx="40" fill="url(#bg)"/>
+  <!-- Clock face -->
+  <circle cx="100" cy="100" r="68" fill="url(#g1)" opacity="0.15"/>
+  <circle cx="100" cy="100" r="64" fill="none" stroke="url(#g1)" stroke-width="10"/>
+  <!-- Hour markers -->
+  <line x1="100" y1="46" x2="100" y2="56" stroke="url(#g1)" stroke-width="6" stroke-linecap="round"/>
+  <line x1="154" y1="100" x2="144" y2="100" stroke="url(#g1)" stroke-width="6" stroke-linecap="round"/>
+  <line x1="100" y1="154" x2="100" y2="144" stroke="url(#g1)" stroke-width="6" stroke-linecap="round"/>
+  <line x1="46" y1="100" x2="56" y2="100" stroke="url(#g1)" stroke-width="6" stroke-linecap="round"/>
+  <!-- Hands -->
+  <line x1="100" y1="100" x2="100" y2="60" stroke="white" stroke-width="8"
+        stroke-linecap="round" opacity="0.9"/>
+  <line x1="100" y1="100" x2="130" y2="116" stroke="url(#g2)" stroke-width="7"
+        stroke-linecap="round" opacity="0.9"/>
+  <!-- Center dot -->
+  <circle cx="100" cy="100" r="7" fill="white"/>
+</svg>

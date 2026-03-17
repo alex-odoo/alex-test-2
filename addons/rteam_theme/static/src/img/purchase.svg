@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E2235"/>
+      <stop offset="100%" stop-color="#161929"/>
+    </linearGradient>
+    <linearGradient id="g1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1ABC9C"/>
+      <stop offset="100%" stop-color="#3498DB"/>
+    </linearGradient>
+    <linearGradient id="g2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#16A085"/>
+      <stop offset="100%" stop-color="#2980B9"/>
+    </linearGradient>
+  </defs>
+  <rect width="200" height="200" rx="40" fill="url(#bg)"/>
+  <!-- Credit card body -->
+  <rect x="22" y="58" width="156" height="100" rx="16" fill="url(#g1)"/>
+  <!-- Card shine -->
+  <rect x="22" y="58" width="156" height="40" rx="16" fill="white" opacity="0.08"/>
+  <!-- Magnetic stripe -->
+  <rect x="22" y="98" width="156" height="18" fill="#0d1117" opacity="0.35"/>
+  <!-- Chip -->
+  <rect x="36" y="68" width="36" height="28" rx="6" fill="url(#g2)" opacity="0.8"/>
+  <rect x="42" y="74" width="24" height="16" rx="3" fill="white" opacity="0.2"/>
+  <!-- Card number dots -->
+  <circle cx="60" cy="138" r="4" fill="white" opacity="0.7"/>
+  <circle cx="74" cy="138" r="4" fill="white" opacity="0.7"/>
+  <circle cx="88" cy="138" r="4" fill="white" opacity="0.7"/>
+  <circle cx="102" cy="138" r="4" fill="white" opacity="0.7"/>
+  <circle cx="120" cy="138" r="4" fill="white" opacity="0.4"/>
+  <circle cx="134" cy="138" r="4" fill="white" opacity="0.4"/>
+  <circle cx="148" cy="138" r="4" fill="white" opacity="0.4"/>
+  <circle cx="162" cy="138" r="4" fill="white" opacity="0.4"/>
+  <!-- Wireless icon top-right -->
+  <path d="M148,68 Q164,68 164,84" stroke="white" stroke-width="5" fill="none"
+        stroke-linecap="round" opacity="0.6"/>
+  <path d="M153,74 Q160,74 160,81" stroke="white" stroke-width="5" fill="none"
+        stroke-linecap="round" opacity="0.7"/>
+  <circle cx="157" cy="84" r="4" fill="white" opacity="0.8"/>
+</svg>

@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E2235"/>
+      <stop offset="100%" stop-color="#161929"/>
+    </linearGradient>
+    <linearGradient id="g1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F39C12"/>
+      <stop offset="100%" stop-color="#1ABC9C"/>
+    </linearGradient>
+    <linearGradient id="g2" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFC300"/>
+      <stop offset="100%" stop-color="#F39C12"/>
+    </linearGradient>
+  </defs>
+  <rect width="200" height="200" rx="40" fill="url(#bg)"/>
+  <!-- Sun -->
+  <circle cx="100" cy="72" r="26" fill="url(#g2)"/>
+  <!-- Sun rays -->
+  <line x1="100" y1="32" x2="100" y2="40" stroke="#FFC300" stroke-width="6" stroke-linecap="round"/>
+  <line x1="130" y1="42" x2="124" y2="48" stroke="#FFC300" stroke-width="6" stroke-linecap="round"/>
+  <line x1="140" y1="72" x2="132" y2="72" stroke="#FFC300" stroke-width="6" stroke-linecap="round"/>
+  <line x1="70" y1="42" x2="76" y2="48" stroke="#FFC300" stroke-width="6" stroke-linecap="round"/>
+  <line x1="60" y1="72" x2="68" y2="72" stroke="#FFC300" stroke-width="6" stroke-linecap="round"/>
+  <!-- Umbrella canopy -->
+  <path d="M26,120 Q100,60 174,120 Z" fill="url(#g1)"/>
+  <path d="M26,120 Q100,70 174,120" stroke="white" stroke-width="2" fill="none" opacity="0.2"/>
+  <!-- Umbrella pole -->
+  <line x1="100" y1="120" x2="100" y2="172" stroke="url(#g1)" stroke-width="7"
+        stroke-linecap="round"/>
+  <path d="M100,172 Q100,185 114,185 Q122,185 122,176" stroke="url(#g1)" stroke-width="7"
+        stroke-linecap="round" fill="none"/>
+</svg>

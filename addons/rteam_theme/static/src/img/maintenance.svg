@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E2235"/>
+      <stop offset="100%" stop-color="#161929"/>
+    </linearGradient>
+    <linearGradient id="g1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E74C3C"/>
+      <stop offset="100%" stop-color="#F39C12"/>
+    </linearGradient>
+  </defs>
+  <rect width="200" height="200" rx="40" fill="url(#bg)"/>
+  <!-- Wrench -->
+  <path d="M60,158 L116,98 Q106,74 120,56 Q134,38 152,44
+           Q136,60 140,72 Q152,70 162,56 Q170,76 156,90
+           Q140,104 116,98 L60,158 Z"
+        fill="url(#g1)"/>
+  <!-- Wrench hole -->
+  <circle cx="148" cy="64" r="10" fill="#1E2235"/>
+  <!-- Wrench handle rounded end -->
+  <circle cx="54" cy="162" r="12" fill="url(#g1)"/>
+  <!-- Small gear accent -->
+  <circle cx="62" cy="56" r="28" fill="url(#g1)" opacity="0.15"/>
+  <circle cx="62" cy="56" r="18" fill="none" stroke="url(#g1)" stroke-width="5" opacity="0.4" stroke-dasharray="8 6"/>
+</svg>

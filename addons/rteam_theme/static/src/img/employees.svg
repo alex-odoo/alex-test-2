@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E2235"/>
+      <stop offset="100%" stop-color="#161929"/>
+    </linearGradient>
+    <linearGradient id="g1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3498DB"/>
+      <stop offset="100%" stop-color="#9B59B6"/>
+    </linearGradient>
+    <linearGradient id="g2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2980B9"/>
+      <stop offset="100%" stop-color="#6C3483"/>
+    </linearGradient>
+  </defs>
+  <rect width="200" height="200" rx="40" fill="url(#bg)"/>
+  <!-- Back person (right) -->
+  <circle cx="128" cy="72" r="24" fill="url(#g2)" opacity="0.7"/>
+  <path d="M96,168 Q128,138 160,168" stroke="url(#g2)" stroke-width="18"
+        stroke-linecap="round" fill="none" opacity="0.7"/>
+  <!-- Front person (left) -->
+  <circle cx="80" cy="76" r="28" fill="url(#g1)"/>
+  <path d="M36,170 Q80,136 124,170" stroke="url(#g1)" stroke-width="22"
+        stroke-linecap="round" fill="none"/>
+  <!-- Person face lines (simplified) -->
+  <circle cx="80" cy="70" r="14" fill="white" opacity="0.15"/>
+</svg>

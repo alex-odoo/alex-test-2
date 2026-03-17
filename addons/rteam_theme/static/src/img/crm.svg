@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E2235"/>
+      <stop offset="100%" stop-color="#161929"/>
+    </linearGradient>
+    <linearGradient id="g1" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#27AE60"/>
+      <stop offset="100%" stop-color="#1ABC9C"/>
+    </linearGradient>
+  </defs>
+  <rect width="200" height="200" rx="40" fill="url(#bg)"/>
+  <!-- Funnel shape -->
+  <path d="M30,44 L170,44 L120,96 L120,158 L80,140 L80,96 Z" fill="url(#g1)" opacity="0.9"/>
+  <!-- Stage lines inside funnel -->
+  <line x1="44" y1="66" x2="156" y2="66" stroke="white" stroke-width="3" opacity="0.4"/>
+  <line x1="62" y1="86" x2="138" y2="86" stroke="white" stroke-width="3" opacity="0.3"/>
+  <!-- Arrow at bottom -->
+  <polygon points="100,170 86,148 114,148" fill="url(#g1)"/>
+</svg>
